@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container{
+    background: linear-gradient(120deg, #ffe53bd8, #ff2525da);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    /* display tempo*/
+.cronometro{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px rgba(0,0,0,.5);
+}
+
+.cronometro div{
+    height: 170px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(5,5,5,0.9);
+    box-shadow: 5px 5px 15px rgba(0,0,0,.7);
+    border-radius: 7px;
+    letter-spacing: 3px;
+}
+.cronometro span{
+    font-weight: bolder;
+    font-size: 60px;
+}
+.cronometro span.tempo{
+    font-size: 20px;
+}
+
+    /*botões*/
+.btn{
+    padding-top: 40px;
+    gap: 50px;
+    display: flex;
+
+}
+button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0,0,0,.2);
+    transition: background-color 0.3s ease;
+}
+
+.iniciar{
+    background-color: #27ae60;
+}
+.iniciar:hover{
+    background-color: #2ecc71;
+}
+.parar{
+    background-color: #2980b9;
+}
+.parar:hover{
+    background-color: #3498db;
+}
+.zerar{
+    background-color: #c0392b;
+}
+.zerar:hover{
+    background-color: #e74c3c;
+}
