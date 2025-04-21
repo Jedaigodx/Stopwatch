@@ -13,12 +13,15 @@ function doisdigitos(digito){
 }
 
 function iniciar() {
-    intervalo = setInterval(watch,1000)
+    if(!intervalo){
+        intervalo = setInterval(watch,1000);
+    }
+    
 }
-
 
 function parar() {
     clearInterval(intervalo)
+    intervalo = null;
 }
 
 function zerar() {
@@ -32,16 +35,16 @@ function zerar() {
 }
 function watch(){
     seg++;
-    document.getElementById("segundos").innerText=doisdigitos(seg);
     if(seg==60){
         seg=0;
         min++;
-        document.getElementById("minutos").innerText=doisdigitos(min);
         if(min==60)
         {
             min=0;
-            h++;
-            document.getElementById("horas").innerText=doisdigitos(h);
+            h++;  
         }
     }
+    document.getElementById("segundos").innerText=doisdigitos(seg);
+    document.getElementById("minutos").innerText=doisdigitos(min);
+    document.getElementById("horas").innerText=doisdigitos(h);
 }
